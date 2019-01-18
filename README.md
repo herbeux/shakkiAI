@@ -1,0 +1,2 @@
+# shakkiAI
+c# projekti
