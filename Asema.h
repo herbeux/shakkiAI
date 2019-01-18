@@ -27,3 +27,12 @@ public:
 	Asema();
 	Nappula* lauta[8][8];
 };
+
+
+class Kayttoliittyma{
+
+public:
+	Kayttoliittyma(Asema* asema);
+	Asema* asema;
+	void piirraLauta();
+};
