@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "ShakkiAI.h"
+#include "Nappula.h"
 using namespace std;
 
 /*VK, L"\u2654	
