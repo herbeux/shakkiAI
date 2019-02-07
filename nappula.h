@@ -1,8 +1,8 @@
 #pragma once
-#include <iostream>
-#include <string>
 
-using namespace std;
+#include <list>
+#include <string>
+#include "asema.h"
 
 
 // Vakioarvot nappulatyypeille.
@@ -12,19 +12,24 @@ enum
 	MT, MR, ML, MD, MK, MS
 };
 
-class Nappula {
+
+// Yliluokka shakkinappuloille.
+class Nappula
+{
 
 private:
-	wstring unicode;
-	int _vari; // valkea = 0, musta = 1
-	int _koodi; // VT, VR, MT tms.
+	std::wstring	_unicode;	// nappulaa vastaava unicode-merkki
+	int				_vari;		// valkea = 0, musta = 1
+	int				_koodi;		// VT, VR, MT tms.
+
 public:
 	Nappula(std::wstring, int, int);
-	Nappula() {};
-	void setKoodi(int);
-	int getKoodi();
-	void setUnicode(std::wstring);
-	wstring getUnicode();
-	void setVari(int);
-	int getVari();
+	Nappula() {}
+
+	void setUnicode(std::wstring unicode) { _unicode = unicode; }
+	std::wstring getUnicode() { return _unicode; }
+	void setVari(int vari) { _vari = vari; }
+	int getVari() { return _vari; }
+	int getKoodi() { return _koodi; }
+	void setKoodi(int koodi) { _koodi = koodi; }
 };
