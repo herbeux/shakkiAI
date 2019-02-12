@@ -26,6 +26,14 @@ public:
 	Nappula(std::wstring, int, int);
 	Nappula() {}
 
+	// virtual jotta myöhäinen sidonta käytössä
+	virtual void annaSiirrot(
+		std::list<Siirto>& lista,
+		Ruutu* ruutu,
+		Asema* asema,
+		int vari
+	) = 0;
+
 	void setUnicode(std::wstring unicode) { _unicode = unicode; }
 	std::wstring getUnicode() { return _unicode; }
 	void setVari(int vari) { _vari = vari; }
